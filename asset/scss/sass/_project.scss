@@ -1,0 +1,90 @@
+.section_project{
+    padding: 100px 0px;
+    background-color: var(--bg-color-medium);
+
+    h2{
+        @include heading3;
+        text-align: center;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 450px;
+        padding: 50px 0px;
+        overflow: hidden;
+        z-index: 0;
+
+        .swiper-wrapper{
+            .swiper-slide {
+                width: 350px;
+                .card{
+                    padding: 5px;
+                    background-color: var(--bg-color-dark);
+                    border-radius: 10px;
+                    overflow: hidden;
+        
+                    .img_box{
+                        border-radius: 5px;
+                        img{
+                            height: 100%;
+                        }
+                    }
+        
+                    .card_text{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        h2{
+                            @include heading3;
+                            margin-top: 10px
+                        }
+                        p{
+                            @include pera1;
+                            line-height: 0;
+                        }
+                        button{
+                            @include button;
+                            margin-top: 40px;
+        
+                            a{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+          
+    
+        .swiper-pagination {
+            bottom: 0px !important;
+    
+            .swiper-pagination-bullet{
+                background-color: var(--color-orange);
+                width: 10px;
+                border-radius: 10px;
+                transition: var(--transition-3);
+            }
+    
+            .swiper-pagination-bullet-active {
+                background-color: var(--color-orange);
+                width: 20px;
+                border-radius: 10px;
+                transition: var(--transition-3);
+            }
+        }
+    
+        .swiper-button-next, .swiper-button-prev{
+            display: none;
+            color: var(--color-white);
+            transform: scale(1.5);
+            transition: var(--transition-3);
+
+            &:hover{
+                color: var(--color-orange);
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,53 @@
+.section_about{
+    padding: 100px 0px;
+    background-color: var(--bg-color-medium);
+
+    h2{
+        @include heading3;
+        font-size: 25px;
+    }
+    h3{
+        @include heading2;
+        font-weight: 500;
+    }
+    h4{
+        @include heading3;
+
+        &::after{
+            content: '';
+        }
+    }
+    .email{
+        @include pera3;
+        color: var(--color-orange);
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .pera1{
+        @include pera3;
+        margin: 0px;
+        a{
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+    .pera2{
+        @include pera1;
+    }
+    table{
+        tr{
+            td{
+                @include pera2;
+                padding: 5px;
+
+                a{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    button{
+        @include button;
+        margin-top: 10px;
+    }
+}

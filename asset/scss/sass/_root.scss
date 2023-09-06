@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Satisfy&display=swap');
+
+:root{
+
+    --color-pera: #bbbbbb;
+    --color-pera-footer: #909497;
+    --color-orange: #f87652;
+    --color-white: #fff;
+    --color-footer-border: #CACFD2;
+    --color-transparent-grey: #81818180;
+
+    --bg-color-invert: #CACFD2;
+    --bg-color-dark: #232323;
+    --bg-color-light: #333647;
+    --bg-color-medium: #282a39;
+
+    --transition-3: all linear 0.3s; 
+    --transition-5: all linear 0.5s; 
+    --transition-7: all linear 0.7s; 
+    --transition-10: all linear 1s; 
+
+    --boxShadow: 0px 3px 5px #000;
+}
+
+@mixin heading1 {
+    font-size: 40px;
+    font-weight: 800;
+
+    span{
+        color: var(--color-orange);
+    }
+}
+@mixin heading2 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        text-align: center;
+        top: 10px;
+        width: 90px;
+        height: 2px;
+        background-color: var(--color-orange);
+        margin-left: 6px;
+    }
+
+    span{
+        color: var(--color-orange);
+    }
+}
+@mixin heading3 {
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 20px;
+
+    span{
+        color: var(--color-orange);
+    }
+
+    &::after{
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100px;
+        height: 2px;
+        background-color: var(--color-orange);
+    }
+}
+@mixin pera1 {
+    font-size: 13px;
+    color: var(--color-pera);
+}
+@mixin pera2 {
+    font-size: 15px;
+    color: var(--color-white);
+}
+
+@mixin pera3 {
+    font-size: 18px;
+    color: var(--color-white);
+}
+
+@mixin button{
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 19px;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    border: 3px solid var(--color-orange);
+
+    &:hover{
+        animation: swing 0.5s;
+    }
+}
+.opacity0{
+    opacity: 0;
+}
+
+.img_box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
+.mb_10{
+    margin-bottom: 10px !important; 
+}
+.mb_20{
+    margin-bottom: 20px !important;
+}
+.mb_50{
+    margin-bottom: 50px !important;
+}
+
+.dark_mode{
+    --color-pera: #bbbbbb;
+    --color-white: #fff;
+
+    --bg-color-dark: #232323;
+    --bg-color-light: #333647;
+    --bg-color-medium: #282a39;
+}
+
+.light_mode{
+    --color-pera: #454545;
+    --color-white: #000;
+
+    --bg-color-dark:  #4efdfd;
+    --bg-color-light: #B9F3FC;
+    --bg-color-medium: #E3DFFD;
+}
+
+.color_orange{
+    --color-orange: #f87652;
+}
+.color_blue{
+    --color-orange: #50c8f9;
+}
+.color_violet{
+    --color-orange: #c347f6;
+}
+.color_yellow{
+    --color-orange: #f5d03b;
+}
+.color_red{
+    --color-orange: #f93970;
+}

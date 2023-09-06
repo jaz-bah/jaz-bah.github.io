@@ -1,0 +1,54 @@
+.section_banner{
+    padding: 100px 0px;
+    .banner_content{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3{
+            @include heading2;
+            &::after{
+                content: '';
+            }
+        }
+
+        h2{
+            @include heading1;
+        }
+
+        h1{
+            @include heading2;
+        }
+        p{
+            @include pera2;
+        }
+        button{
+            @include button;
+            margin-top: 20px;
+            cursor: pointer;
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+        }
+
+    }
+    .banner_img_div{
+        padding: 20px;
+        .img_box{
+            img{
+                animation: float 6s ease-in-out infinite;
+            }
+        }
+    }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

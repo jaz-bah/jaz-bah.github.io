@@ -1,0 +1,165 @@
+.section_skills{
+    padding: 150px 0px;
+    
+    h2{
+        @include heading3;
+
+        &::after{
+            content: '';
+        }
+    }
+    p{
+        @include pera2;
+        color: var(--color-pera);
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            border: none;
+            padding: 10px 20px;
+            border-left: 4px solid var(--color-orange);
+            border-radius: 0px;
+            margin: 5px 0px;
+            width: 208px;
+            background: var(--color-transparent-grey);
+            font-size: 14px;
+
+            a{
+                color: var(--color-white);
+                font-weight: 500;
+                width: 100%;
+                cursor: pointer;
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .swiper{
+        width: 100%;
+        height: 300px;
+        padding-bottom: 30px;
+        margin-top: 20px;
+        z-index: 0;
+
+        .swiper-slide{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-color-dark);
+            border-radius: 10px;
+
+            .circle-big {
+                transform: scale(1.5);
+                position: relative;
+                width: 114px;
+                height: 114px;
+                margin: 30px auto 25px auto;
+
+                svg {
+                    width: 114px;
+                    height: 114px;
+                }
+
+                .bg {
+                    fill: none;
+                    stroke-width: 10px;
+                    stroke: var(--color-transparent-grey);
+                }
+
+                .progress {
+                    fill: none;
+                    stroke-width: 10px;
+                    stroke: var(--color-orange);
+                    stroke-linecap: round;
+                    transform: rotate(-90deg);
+                    transform-origin: 50% 50%;
+                }
+
+                .html_progress{
+                    stroke-dasharray: 325;
+                    stroke-dashoffset: 0;
+                }
+
+                .css_progress{
+                    stroke-dasharray: 325;
+                    stroke-dashoffset: 0;
+                }
+
+                .bootstrap_progress{
+                    stroke-dasharray: 325;
+                    stroke-dashoffset: 16.25;
+                }
+
+                .javascript_progress{
+                    stroke-dasharray: 325;
+                    stroke-dashoffset: 65;
+                }
+
+                .jquery_progress{
+                    stroke-dasharray: 325;
+                    stroke-dashoffset: 97.5;
+                }
+
+                .react_progress{
+                    stroke-dasharray: 325;
+                    stroke-dashoffset: 97.5;
+                }
+
+                .typescript_progress{
+                    stroke-dasharray: 325;
+                    stroke-dashoffset: 65;
+                }
+
+                .next_progress{
+                    stroke-dasharray: 325;
+                    stroke-dashoffset: 130;
+                }
+
+                .text {
+                    position: absolute;
+                    width: 100%;
+                    top: 37px;
+                    font-size: 24px;
+                    text-align: center;
+                    font-weight: 400;
+                    line-height: 22px;
+                    color: var(--color-white);
+
+                    .small {
+                        font-size: 14px;
+                        color: var(--color-orange);
+                    }
+                }
+            }
+        }
+        .swiper-pagination {
+            bottom: 0px !important;
+    
+            .swiper-pagination-bullet{
+                background-color: var(--color-orange);
+                width: 10px;
+                border-radius: 10px;
+                transition: var(--transition-3);
+            }
+
+            .swiper-pagination-bullet-active {
+                background-color: var(--color-orange);
+                width: 20px;
+                border-radius: 10px;
+                transition: var(--transition-3);
+            }
+        }
+
+        .swiper-button-next, .swiper-button-prev{
+            display: none;
+            color: var(--color-orange);
+            transform: scale(0.5);
+        }
+    }
+}
